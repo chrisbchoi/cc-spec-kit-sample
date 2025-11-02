@@ -1,0 +1,10 @@
+/specify Build an application that can help me organize my itinerary trips. Trips should have the details of flights and hotels at minimum and organize them by date, location and google map locations
+
+The user should be able to input itinerary step by step. The user should be able to add each step 
+Flight and other transportation should have departure and arrival time, date, location and the length of travel.
+Accommodation should have date, duration, location, and any other details required.
+Accommodation details should be able to linked to google map.
+
+Once each item is added to list, they should be sequentially checked and see if there are any gaps in the list.
+
+Items are grouped by date and time and can be re-organized by dragging and dropping on the main page.
