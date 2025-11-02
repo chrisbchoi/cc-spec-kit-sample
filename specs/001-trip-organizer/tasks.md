@@ -188,10 +188,10 @@ Tasks are organized into phases with the following markers:
 4. Implement `findAll()`, `findById()`, `create()`, `update()`, `delete()`
 
 **Verification**:
-- [ ] Entity properly decorated
-- [ ] Repository methods work
-- [ ] Can create and retrieve trips from database
-- [ ] Timestamps auto-populate
+- [X] Entity properly decorated
+- [X] Repository methods work
+- [X] Can create and retrieve trips from database
+- [X] Timestamps auto-populate
 
 ---
 
