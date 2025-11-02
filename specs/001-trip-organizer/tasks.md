@@ -363,7 +363,7 @@ Tasks are organized into phases with the following markers:
 
 ---
 
-### API-4: Implement Itinerary Controller [S]
+### API-4: Implement Itinerary Controller [S] ✅
 **Description**: Create REST API endpoints for itinerary items  
 **Files**: 
 - `backend/src/modules/itinerary/itinerary.controller.ts`
@@ -380,11 +380,11 @@ Tasks are organized into phases with the following markers:
 9. Implement `PATCH /api/itinerary/:id/reorder` endpoint
 
 **Verification**:
-- [ ] All endpoints respond correctly
-- [ ] Can create each item type via API
-- [ ] Can retrieve items for a trip
-- [ ] Can update and delete items
-- [ ] Reorder endpoint works
+- [X] All endpoints respond correctly
+- [X] Can create each item type via API
+- [X] Can retrieve items for a trip
+- [X] Can update and delete items
+- [X] Reorder endpoint works
 
 ---
 
