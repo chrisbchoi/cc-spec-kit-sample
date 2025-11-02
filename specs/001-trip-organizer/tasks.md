@@ -141,11 +141,11 @@ Tasks are organized into phases with the following markers:
 9. Run migrations
 
 **Verification**:
-- [ ] Database file created
-- [ ] All tables created with correct schema
-- [ ] Indexes created
-- [ ] Foreign key constraints work
-- [ ] Can query tables successfully
+- [X] Database file created
+- [X] All tables created with correct schema
+- [X] Indexes created
+- [X] Foreign key constraints work
+- [X] Can query tables successfully
 
 ---
 
