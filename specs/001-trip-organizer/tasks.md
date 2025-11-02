@@ -338,7 +338,7 @@ Tasks are organized into phases with the following markers:
 
 ---
 
-### API-3: Implement Itinerary Service [S]
+### API-3: Implement Itinerary Service [S] ✅
 **Description**: Create business logic for itinerary items  
 **Files**: 
 - `backend/src/modules/itinerary/itinerary.service.ts`
@@ -355,11 +355,11 @@ Tasks are organized into phases with the following markers:
 9. Calculate duration automatically
 
 **Verification**:
-- [ ] Can create all item types
-- [ ] Items returned in chronological order
-- [ ] Duration calculated correctly
-- [ ] Reorder updates timestamps
-- [ ] Validation prevents invalid data
+- [X] Can create all item types
+- [X] Items returned in chronological order
+- [X] Duration calculated correctly
+- [X] Reorder updates timestamps
+- [X] Validation prevents invalid data
 
 ---
 
