@@ -473,6 +473,65 @@ Tasks are organized into phases with the following markers:
 6. Add error handling for API failures
 
 **Verification**:
+- [X] Geocode endpoint returns coordinates
+- [X] Place details endpoint works
+- [X] Errors handled properly
+- [X] API key never exposed to frontend
+
+---
+3. Retrieve all items for trip
+4. Run gap detection algorithm
+5. Return gaps with proper formatting
+
+**Verification**:
+- [X] Endpoint returns gaps for trip
+- [X] Gaps correctly identified
+- [X] Response includes all gap details
+- [X] Performance acceptable (<500ms)
+
+---
+
+### API-7: Implement Maps Service (BFF Proxy) [S]
+**Description**: Create proxy service for Google Maps API  
+**Files**: 
+- `backend/src/modules/maps/maps.service.ts`
+- `backend/src/modules/maps/geocoding.service.ts`
+- `backend/src/modules/maps/location-cache.repository.ts`
+
+**Tasks**:
+1. Install `@googlemaps/google-maps-services-js`
+2. Create `MapsService` with API client
+3. Create `GeocodingService` with caching
+4. Implement `geocode(address: string)` method
+5. Check cache before making API call
+6. Store geocoding results in location_cache table
+7. Implement `getPlaceDetails(placeId: string)` method
+8. Add rate limiting to prevent API abuse
+9. Handle API errors gracefully
+
+**Verification**:
+- [X] Geocoding works for valid addresses
+- [X] Results cached in database
+- [X] Cache hit returns cached result
+- [X] Invalid addresses handled gracefully
+- [X] Rate limiting prevents abuse
+
+---
+
+### API-8: Implement Maps Controller [S]
+**Description**: Create API endpoints for map operations  
+**Files**: 
+- `backend/src/modules/maps/maps.controller.ts`
+
+**Tasks**:
+1. Create `MapsController` with `/api/maps` prefix
+2. Implement `POST /api/maps/geocode` endpoint
+3. Implement `GET /api/maps/place/:placeId` endpoint
+4. Add request validation
+5. Return standardized Location objects
+6. Add error handling for API failures
+
+**Verification**:
 - [ ] Geocode endpoint returns coordinates
 - [ ] Place details endpoint works
 - [ ] Errors handled properly
