@@ -255,11 +255,11 @@ Tasks are organized into phases with the following markers:
 8. Implement `reorder()` for drag-drop
 
 **Verification**:
-- [ ] Can create all item types
-- [ ] Can retrieve items by trip ID
-- [ ] Items sorted by startDate
-- [ ] Can update and delete items
-- [ ] Reorder updates dates correctly
+- [X] Can create all item types
+- [X] Can retrieve items by trip ID
+- [X] Items sorted by startDate
+- [X] Can update and delete items
+- [X] Reorder updates dates correctly
 
 ---
 
