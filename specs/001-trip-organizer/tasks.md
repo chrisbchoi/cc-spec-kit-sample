@@ -46,10 +46,10 @@ Tasks are organized into phases with the following markers:
 4. Install core dependencies: `@ngrx/store`, `@ngrx/effects`, `@ngrx/signals`, `@angular/cdk`
 
 **Verification**:
-- [ ] Angular app runs with `ng serve`
-- [ ] TypeScript strict mode enabled
-- [ ] NgRx packages installed
-- [ ] SCSS compilation works
+- [X] Angular app runs with `ng serve`
+- [X] TypeScript strict mode enabled
+- [X] NgRx packages installed
+- [X] SCSS compilation works
 
 ---
 
