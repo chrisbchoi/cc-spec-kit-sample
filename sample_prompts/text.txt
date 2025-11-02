@@ -15,3 +15,6 @@ Items are grouped by date and time and can be re-organized by dragging and dropp
 
 
 /tasks Break down the plan for the Trip Organizer application into a series of implementable tasks. Ensure each task is small, independently verifiable, and focuses on a specific piece of functionality.
+
+
+/speckit.implement Data-5: Create Frontend TypeScript Models [P] and trip-organiser codes are in /Users/chris/src/apps/trip-organizer
