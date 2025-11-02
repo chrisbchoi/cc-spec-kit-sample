@@ -292,7 +292,7 @@ Tasks are organized into phases with the following markers:
 
 ## Phase 3: Backend API Implementation
 
-### API-1: Implement Trips Service [S]
+### API-1: Implement Trips Service [S] ✅
 **Description**: Create business logic for trip management  
 **Files**: 
 - `backend/src/modules/trips/trips.service.ts`
@@ -308,10 +308,10 @@ Tasks are organized into phases with the following markers:
 8. Add error handling for not found scenarios
 
 **Verification**:
-- [ ] All CRUD operations work
-- [ ] Validation errors thrown correctly
-- [ ] Not found errors handled
-- [ ] Deleting trip cascades to items
+- [X] All CRUD operations work
+- [X] Validation errors thrown correctly
+- [X] Not found errors handled
+- [X] Deleting trip cascades to items
 
 ---
 
@@ -615,7 +615,7 @@ Tasks are organized into phases with the following markers:
 8. Implement `getGaps(tripId: string): Observable<ItineraryGap[]>`
 
 **Verification**:
-- [ ] All CRUD operations work
+- [X] All CRUD operations work
 - [ ] Type-specific creation methods work
 - [ ] Gaps endpoint returns correctly
 - [ ] Reorder API call works
