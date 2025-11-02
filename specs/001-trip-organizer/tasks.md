@@ -208,10 +208,10 @@ Tasks are organized into phases with the following markers:
 4. Add date validation (endDate must be after startDate)
 
 **Verification**:
-- [ ] DTOs have proper validation decorators
-- [ ] Invalid data throws validation errors
-- [ ] Date range validation works
-- [ ] Can transform plain objects to DTOs
+- [X] DTOs have proper validation decorators
+- [X] Invalid data throws validation errors
+- [X] Date range validation works
+- [X] Can transform plain objects to DTOs
 
 ---
 
