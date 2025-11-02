@@ -8,3 +8,10 @@ Accommodation details should be able to linked to google map.
 Once each item is added to list, they should be sequentially checked and see if there are any gaps in the list.
 
 Items are grouped by date and time and can be re-organized by dragging and dropping on the main page.
+
+
+/plan The application uses the latest angular with minimal number of libraries. Use ngrx and the latest angular best practice including ngrx, signal, scss, and typeScript as much as possible. Images are not uploaded anywhere and metadata is stored in a local SQLite database. It should use concept of BFF and have a sperate api layer so that sensitive api calls are not exposed in frontend.
+
+
+
+/tasks Break down the plan for the Trip Organizer application into a series of implementable tasks. Ensure each task is small, independently verifiable, and focuses on a specific piece of functionality.
