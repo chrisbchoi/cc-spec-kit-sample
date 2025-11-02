@@ -115,10 +115,10 @@ Tasks are organized into phases with the following markers:
 5. Add npm scripts for linting
 
 **Verification**:
-- [ ] `npm run lint` works in frontend
-- [ ] `npm run lint` works in backend
-- [ ] Prettier formats code correctly
-- [ ] No conflicts between ESLint and Prettier
+- [X] `npm run lint` works in frontend
+- [X] `npm run lint` works in backend
+- [X] Prettier formats code correctly
+- [X] No conflicts between ESLint and Prettier
 
 ---
 
