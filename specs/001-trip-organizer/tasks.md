@@ -232,10 +232,10 @@ Tasks are organized into phases with the following markers:
 6. Configure JSON columns for Location data
 
 **Verification**:
-- [ ] All entities properly decorated
-- [ ] Relationships work correctly
-- [ ] JSON columns parse/stringify correctly
-- [ ] Can query items with their trips
+- [X] All entities properly decorated
+- [X] Relationships work correctly
+- [X] JSON columns parse/stringify correctly
+- [X] Can query items with their trips
 
 ---
 
