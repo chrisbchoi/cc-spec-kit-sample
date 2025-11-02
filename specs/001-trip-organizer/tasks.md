@@ -69,10 +69,10 @@ Tasks are organized into phases with the following markers:
 5. Configure TypeScript strict mode
 
 **Verification**:
-- [ ] Backend starts with `npm run start:dev`
-- [ ] Server listens on port 3000
-- [ ] TypeORM configured
-- [ ] CORS enabled for localhost:4200
+- [X] Backend starts with `npm run start:dev`
+- [X] Server listens on port 3000
+- [X] TypeORM configured
+- [X] CORS enabled for localhost:4200
 
 ---
 
