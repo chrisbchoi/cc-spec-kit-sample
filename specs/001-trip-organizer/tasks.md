@@ -166,10 +166,10 @@ Tasks are organized into phases with the following markers:
 6. Add CORS origins configuration
 
 **Verification**:
-- [ ] Frontend can access environment.apiUrl
-- [ ] Backend loads .env variables
-- [ ] .env is in .gitignore
-- [ ] .env.example has all required variables
+- [X] Frontend can access environment.apiUrl
+- [X] Backend loads .env variables
+- [X] .env is in .gitignore
+- [X] .env.example has all required variables
 
 ---
 
