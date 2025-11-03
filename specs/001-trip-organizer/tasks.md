@@ -651,10 +651,10 @@ Tasks are organized into phases with the following markers:
 8. Add response transformation if needed
 
 **Verification**:
-- [ ] All methods return correctly typed Observables
-- [ ] API endpoints called correctly
-- [ ] Errors propagated properly
-- [ ] Can be injected into store
+- [X] All methods return correctly typed Observables
+- [X] API endpoints called correctly
+- [X] Errors propagated properly
+- [X] Can be injected into store
 
 ---
 
