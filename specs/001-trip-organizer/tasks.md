@@ -1149,11 +1149,11 @@ Tasks are organized into phases with the following markers:
 8. Show errors if creation fails
 
 **Verification**:
-- [ ] Type selector works
-- [ ] Correct form shown per type
-- [ ] Item created successfully
-- [ ] Navigation works
-- [ ] Errors displayed
+- [x] Type selector works
+- [x] Correct form shown per type
+- [x] Item created successfully
+- [x] Navigation works
+- [x] Errors displayed
 
 ---
 
