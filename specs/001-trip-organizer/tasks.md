@@ -1199,11 +1199,11 @@ Tasks are organized into phases with the following markers:
 8. Trigger gap detection after reorder
 
 **Verification**:
-- [ ] Items can be dragged
-- [ ] Drop updates order
-- [ ] Dates recalculated correctly
-- [ ] Visual feedback during drag
-- [ ] Gaps re-detected after reorder
+- [x] Items can be dragged
+- [x] Drop updates order
+- [x] Dates recalculated correctly
+- [x] Visual feedback during drag
+- [x] Gaps re-detected after reorder
 
 ---
 
