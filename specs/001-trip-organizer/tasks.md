@@ -791,10 +791,10 @@ Tasks are organized into phases with the following markers:
 7. Add timezone handling utilities
 
 **Verification**:
-- [ ] Duration calculation accurate
-- [ ] Pipes transform correctly
-- [ ] Date validation works
-- [ ] Timezone handling correct
+- [X] Duration calculation accurate
+- [X] Pipes transform correctly
+- [X] Date validation works
+- [X] Timezone handling correct
 
 ---
 
