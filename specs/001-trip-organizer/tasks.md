@@ -1022,11 +1022,11 @@ Tasks are organized into phases with the following markers:
 7. Emit form data on submit
 
 **Verification**:
-- [ ] Form validates correctly
-- [ ] Duration auto-calculates
-- [ ] Location search works
-- [ ] Date/time pickers work
-- [ ] Submit emits valid flight data
+- [X] Form validates correctly
+- [X] Duration auto-calculates
+- [X] Location search works
+- [X] Date/time pickers work
+- [X] Submit emits valid flight data
 
 ---
 
