@@ -1098,11 +1098,11 @@ Tasks are organized into phases with the following markers:
 8. Handle geocoding errors
 
 **Verification**:
-- [ ] Works as form control
-- [ ] Geocoding triggered correctly
-- [ ] Suggestions displayed
-- [ ] Selection emits Location
-- [ ] Errors handled gracefully
+- [X] Works as form control
+- [X] Geocoding triggered correctly
+- [X] Suggestions displayed
+- [X] Selection emits Location
+- [X] Errors handled gracefully
 
 ---
 
