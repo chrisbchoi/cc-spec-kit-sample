@@ -1047,11 +1047,11 @@ Tasks are organized into phases with the following markers:
 7. Reuse location search component
 
 **Verification**:
-- [ ] Transport type selection works
-- [ ] All fields validate
-- [ ] Duration auto-calculates
-- [ ] Location search integrated
-- [ ] Submit emits valid data
+- [X] Transport type selection works
+- [X] All fields validate
+- [X] Duration auto-calculates
+- [X] Location search integrated
+- [X] Submit emits valid data
 
 ---
 
