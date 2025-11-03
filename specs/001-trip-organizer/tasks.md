@@ -1221,11 +1221,11 @@ Tasks are organized into phases with the following markers:
 6. Maintain grouping by day during drag
 
 **Verification**:
-- [ ] Timeline supports drag-drop
-- [ ] Reorder persists to backend
-- [ ] Gaps update after reorder
-- [ ] Day grouping maintained
-- [ ] Smooth UX
+- [x] Timeline supports drag-drop
+- [x] Reorder persists to backend
+- [x] Gaps update after reorder
+- [x] Day grouping maintained
+- [x] Smooth UX
 
 ---
 
