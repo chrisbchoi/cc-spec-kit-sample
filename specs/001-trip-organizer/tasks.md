@@ -1171,11 +1171,11 @@ Tasks are organized into phases with the following markers:
 6. Handle update in store
 
 **Verification**:
-- [ ] Loads existing item for edit
-- [ ] Form pre-populated correctly
-- [ ] Update saves changes
-- [ ] Navigation works
-- [ ] Original item updated
+- [x] Loads existing item for edit
+- [x] Form pre-populated correctly
+- [x] Update saves changes
+- [x] Navigation works
+- [x] Original item updated
 
 ---
 
