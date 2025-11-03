@@ -945,11 +945,11 @@ Tasks are organized into phases with the following markers:
 8. Make items clickable to edit
 
 **Verification**:
-- [ ] Items displayed chronologically
-- [ ] Grouped by day
-- [ ] Gaps shown visually
-- [ ] Color coding works
-- [ ] Click opens edit
+- [X] Items displayed chronologically
+- [X] Grouped by day
+- [X] Gaps shown visually
+- [X] Color coding works
+- [X] Click opens edit
 
 ---
 
