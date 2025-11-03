@@ -996,10 +996,10 @@ Tasks are organized into phases with the following markers:
 8. Style with warning/error colors
 
 **Verification**:
-- [ ] Shows gap information clearly
-- [ ] Severity colors work
-- [ ] Icons appropriate
-- [ ] Fill gap button emits event
+- [X] Shows gap information clearly
+- [X] Severity colors work
+- [X] Icons appropriate
+- [X] Fill gap button emits event
 
 ---
 
