@@ -695,10 +695,10 @@ Tasks are organized into phases with the following markers:
 6. Add error handling for failed geocoding
 
 **Verification**:
-- [ ] Geocoding returns Location objects
-- [ ] Map URLs generated correctly
-- [ ] Directions URLs work
-- [ ] Errors handled gracefully
+- [X] Geocoding returns Location objects
+- [X] Map URLs generated correctly
+- [X] Directions URLs work
+- [X] Errors handled gracefully
 
 ---
 
