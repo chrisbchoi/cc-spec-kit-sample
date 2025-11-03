@@ -892,12 +892,12 @@ Tasks are organized into phases with the following markers:
 8. Show loading and error states
 
 **Verification**:
-- [ ] Dashboard loads trips
-- [ ] Can create new trip
-- [ ] Can select trip to view details
-- [ ] Can delete trip
-- [ ] Loading spinner shows
-- [ ] Error messages display
+- [x] Dashboard loads trips
+- [x] Can create new trip
+- [x] Can select trip to view details
+- [x] Can delete trip
+- [x] Loading spinner shows
+- [x] Error messages display
 
 ---
 
