@@ -919,11 +919,11 @@ Tasks are organized into phases with the following markers:
 8. Show loading and error states
 
 **Verification**:
-- [ ] Loads trip by ID
-- [ ] Displays trip info
-- [ ] Shows itinerary items
-- [ ] Edit and add buttons work
-- [ ] 404 handling for invalid IDs
+- [X] Loads trip by ID
+- [X] Displays trip info
+- [X] Shows itinerary items
+- [X] Edit and add buttons work
+- [X] 404 handling for invalid IDs
 
 ---
 
