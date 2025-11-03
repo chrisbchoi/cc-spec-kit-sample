@@ -1072,11 +1072,11 @@ Tasks are organized into phases with the following markers:
 7. Add validation
 
 **Verification**:
-- [ ] All fields render correctly
-- [ ] Location integration works
-- [ ] Duration calculated
-- [ ] Validation works
-- [ ] Submit emits valid data
+- [X] All fields render correctly
+- [X] Location integration works
+- [X] Duration calculated
+- [X] Validation works
+- [X] Submit emits valid data
 
 ---
 
