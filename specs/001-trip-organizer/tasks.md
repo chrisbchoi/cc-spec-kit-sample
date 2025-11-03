@@ -1246,10 +1246,10 @@ Tasks are organized into phases with the following markers:
 7. Add map icon
 
 **Verification**:
-- [ ] Location displayed clearly
-- [ ] Map link works
-- [ ] Opens in new tab
-- [ ] Icon shows correctly
+- [x] Location displayed clearly
+- [x] Map link works
+- [x] Opens in new tab
+- [x] Icon shows correctly
 
 ---
 
