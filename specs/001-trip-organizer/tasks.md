@@ -1123,11 +1123,11 @@ Tasks are organized into phases with the following markers:
 7. Add proper labels and accessibility
 
 **Verification**:
-- [ ] Works as form control
-- [ ] Date and time combine correctly
-- [ ] Min/max constraints enforced
-- [ ] Accessible with keyboard
-- [ ] Value updates correctly
+- [x] Works as form control
+- [x] Date and time combine correctly
+- [x] Min/max constraints enforced
+- [x] Accessible with keyboard
+- [x] Value updates correctly
 
 ---
 
