@@ -767,10 +767,10 @@ Tasks are organized into phases with the following markers:
 5. Add proper accessibility attributes
 
 **Verification**:
-- [ ] Components can be imported
-- [ ] Spinner shows loading state
-- [ ] Dialog shows and accepts/cancels
-- [ ] ARIA attributes present
+- [X] Components can be imported
+- [X] Spinner shows loading state
+- [X] Dialog shows and accepts/cancels
+- [X] ARIA attributes present
 
 ---
 
