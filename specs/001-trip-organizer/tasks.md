@@ -556,10 +556,10 @@ Tasks are organized into phases with the following markers:
 5. Create store module barrel export
 
 **Verification**:
-- [ ] Store initialized in application
-- [ ] Redux DevTools connected
-- [ ] No console errors
-- [ ] Store accessible via inject()
+- [X] Store initialized in application
+- [X] Redux DevTools connected
+- [X] No console errors
+- [X] Store accessible via inject()
 
 ---
 
@@ -579,11 +579,11 @@ Tasks are organized into phases with the following markers:
 8. Handle loading and error states
 
 **Verification**:
-- [ ] Store methods work correctly
-- [ ] Signals update reactively
-- [ ] Computed signals derive correctly
-- [ ] API integration works
-- [ ] Loading and error states managed
+- [X] Store methods work correctly
+- [X] Signals update reactively
+- [X] Computed signals derive correctly
+- [X] API integration works
+- [X] Loading and error states managed
 
 ---
 
@@ -603,11 +603,11 @@ Tasks are organized into phases with the following markers:
 8. Integrate with ItineraryService
 
 **Verification**:
-- [ ] Store methods work correctly
-- [ ] Items sorted chronologically
-- [ ] Gaps loaded and tracked
-- [ ] Reorder updates state
-- [ ] API integration works
+- [X] Store methods work correctly
+- [X] Items sorted chronologically
+- [X] Gaps loaded and tracked
+- [X] Reorder updates state
+- [X] API integration works
 
 ---
 
@@ -627,11 +627,11 @@ Tasks are organized into phases with the following markers:
 7. Type all requests with proper interfaces
 
 **Verification**:
-- [ ] Can make API requests
-- [ ] Base URL prepended correctly
-- [ ] Error handling works
+- [X] Can make API requests
+- [X] Base URL prepended correctly
+- [X] Error handling works
 - [X] Type safety enforced
-- [ ] Interceptors apply correctly
+- [X] Interceptors apply correctly
 
 ---
 
