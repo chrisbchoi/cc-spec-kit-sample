@@ -816,11 +816,11 @@ Tasks are organized into phases with the following markers:
 8. Add empty state when no trips
 
 **Verification**:
-- [ ] Trips displayed in list
-- [ ] Click navigates to detail
-- [ ] Delete works with confirmation
-- [ ] Empty state shows when no trips
-- [ ] Responsive layout works
+- [X] Trips displayed in list
+- [X] Click navigates to detail
+- [X] Delete works with confirmation
+- [X] Empty state shows when no trips
+- [X] Responsive layout works
 
 ---
 
