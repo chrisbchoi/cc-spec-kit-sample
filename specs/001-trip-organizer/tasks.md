@@ -675,9 +675,9 @@ Tasks are organized into phases with the following markers:
 
 **Verification**:
 - [X] All CRUD operations work
-- [ ] Type-specific creation methods work
-- [ ] Gaps endpoint returns correctly
-- [ ] Reorder API call works
+- [X] Type-specific creation methods work
+- [X] Gaps endpoint returns correctly
+- [X] Reorder API call works
 
 ---
 
