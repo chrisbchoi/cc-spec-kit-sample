@@ -841,10 +841,10 @@ Tasks are organized into phases with the following markers:
 7. Add hover effects
 
 **Verification**:
-- [ ] Card displays trip info
-- [ ] Events emit correctly
-- [ ] Styling matches design
-- [ ] Hover effects work
+- [x] Card displays trip info
+- [x] Events emit correctly
+- [x] Styling matches design
+- [x] Hover effects work
 
 ---
 
