@@ -970,11 +970,11 @@ Tasks are organized into phases with the following markers:
 7. Style with card and border color by type
 
 **Verification**:
-- [ ] Displays flight info correctly
-- [ ] Displays transport info correctly
-- [ ] Displays accommodation info correctly
-- [ ] Actions emit events
-- [ ] Styling correct per type
+- [X] Displays flight info correctly
+- [X] Displays transport info correctly
+- [X] Displays accommodation info correctly
+- [X] Actions emit events
+- [X] Styling correct per type
 
 ---
 
