@@ -1436,6 +1436,33 @@ Tasks are organized into phases with the following markers:
 
 ---
 
+### Advanced-11: Fix Itinerary Item Details Rendering Error [S]
+**Description**: Fix undefined location property errors when rendering itinerary items in trip detail timeline  
+**Files**: 
+- `frontend/src/app/features/trips/pages/trip-detail/trip-detail.component.html`
+
+**Tasks**:
+1. Add optional chaining (?.) to all location property accesses in timeline
+2. Add fallback values for missing location data (address, city, country)
+3. Verify departureLocation and arrivalLocation null-safety for flights
+4. Verify location null-safety for transport items
+5. Verify location null-safety for accommodation items
+6. Test with items that have incomplete location data
+7. Ensure no console errors when displaying items
+
+**Verification**:
+- [x] No "Cannot read properties of undefined" errors in console
+- [x] Items with missing location data display gracefully
+- [x] All location properties safely accessed with optional chaining
+- [x] Fallback text displays when location data is missing
+- [x] Timeline renders all item types without errors
+- [x] Page loads without runtime errors
+
+**Completed**: 2025-11-04
+**Commit**: fix: add optional chaining to location properties in trip detail template (Advanced-11) [989a809]
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
