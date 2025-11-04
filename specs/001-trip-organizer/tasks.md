@@ -1408,6 +1408,34 @@ Tasks are organized into phases with the following markers:
 
 ---
 
+### Advanced-10: Fix rxMethod Calls for Store State Reactivity [S] ✅
+**Description**: Fix add-item component to properly monitor store state after rxMethod calls  
+**Files**: 
+- `frontend/src/app/features/itinerary/pages/add-item/add-item.component.ts`
+
+**Tasks**:
+1. Update onFlightSubmit to monitor store loading() and error() signals ✅
+2. Update onTransportSubmit to monitor store loading() and error() signals ✅
+3. Update onAccommodationSubmit to monitor store loading() and error() signals ✅
+4. Replace fixed setTimeout with reactive state monitoring using setInterval ✅
+5. Add proper error display when store.error() is set ✅
+6. Navigate back only after loading completes successfully ✅
+7. Add timeout fallback (10 seconds) to prevent infinite waiting ✅
+
+**Verification**:
+- [x] Form submission triggers API call to backend
+- [x] Loading state tracked during API call
+- [x] Error messages displayed when API call fails
+- [x] Success navigates back to trip detail page
+- [x] Items appear in timeline after creation
+- [x] Items persist in database after page reload
+- [x] Timeout prevents UI from hanging on network failures
+
+**Completed**: 2025-11-04
+**Commit**: fix: monitor store state after rxMethod calls for proper async handling (Advanced-10) [65636d3]
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
