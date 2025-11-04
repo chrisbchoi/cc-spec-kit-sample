@@ -1379,6 +1379,35 @@ Tasks are organized into phases with the following markers:
 
 ---
 
+### Advanced-9: Fix Navigation Paths in Trip Detail Component [S] ✅
+**Description**: Fix navigation bug preventing access to add-item forms  
+**Files**: 
+- `frontend/src/app/features/trips/pages/trip-detail/trip-detail.component.ts`
+
+**Tasks**:
+1. Update onAddItem() navigation path from '/trips/:tripId/items/new' to '/trips/:tripId/add-item' ✅
+2. Update onEditItem() navigation path from '/trips/:tripId/items/:itemId/edit' to '/trips/:tripId/edit-item/:itemId' ✅
+3. Test navigation: Click "Add Item" button reaches add-item page ✅
+4. Verify type selector appears with three options (Flight, Transport, Accommodation) ✅
+5. Test adding flight items and verify they save ✅
+6. Test adding transport items and verify they save ✅
+7. Test adding accommodation items and verify they save ✅
+
+**Verification**:
+- [x] "Add Item" button navigates to correct route
+- [x] Add-item page loads without 404 errors
+- [x] Type selector displays all three options
+- [x] Can successfully add flight items to trip
+- [x] Can successfully add transport items to trip
+- [x] Can successfully add accommodation items to trip
+- [x] Items appear in timeline immediately after creation
+- [x] "Edit Item" button navigates to correct route (when implemented)
+
+**Completed**: 2025-11-04
+**Commit**: fix: correct navigation paths for add-item and edit-item routes (Advanced-9) [e35d58f]
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
