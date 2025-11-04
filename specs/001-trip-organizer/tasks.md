@@ -1526,6 +1526,67 @@ Tasks are organized into phases with the following markers:
 
 ---
 
+### Advanced-14: Fix Nested API Response Data Mapping [S] ✅
+**Description**: Merge nested flight/transport/accommodation data from API response into model objects  
+**Files**: 
+- `frontend/src/app/features/itinerary/services/itinerary-api.service.ts`
+
+**Tasks**:
+1. ✅ Update mapToItineraryItem() to handle nested flight data structure
+2. ✅ Merge item.flight properties into root level for Flight objects
+3. ✅ Merge item.transport properties into root level for Transport objects
+4. ✅ Merge item.accommodation properties into root level for Accommodation objects
+5. ✅ Remove nested properties after merging to avoid duplication
+6. ✅ Test that departure/arrival locations display correctly
+7. ✅ Verify all type-specific fields are accessible in UI
+
+**Verification**:
+- [x] Flight departure and arrival locations display in timeline
+- [x] Transport departure and arrival locations display correctly
+- [x] Accommodation location displays correctly
+- [x] Flight airline, flight number, and confirmation code visible
+- [x] Transport type and provider visible
+- [x] Accommodation name and phone number visible
+- [x] No TypeScript errors in build
+
+**Root Cause**: Backend API returns type-specific data nested under properties:
+```json
+{
+  "id": "...",
+  "type": "flight",
+  "flight": {
+    "departureLocation": {...},
+    "arrivalLocation": {...},
+    "airline": "...",
+    ...
+  }
+}
+```
+
+But frontend models expect flat structure:
+```json
+{
+  "id": "...",
+  "type": "flight",
+  "departureLocation": {...},
+  "arrivalLocation": {...},
+  "airline": "...",
+  ...
+}
+```
+
+**Solution**: Merge nested object with base item using spread operator:
+```typescript
+const flightData = { ...item, ...(item as any).flight };
+delete (flightData as any).flight;
+return new Flight(flightData);
+```
+
+**Completed**: 2025-11-04
+**Commit**: fix: merge nested flight/transport/accommodation data in API response mapping (Advanced-14) [c6de006]
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
