@@ -1658,6 +1658,61 @@ constructor(data?: Partial<Flight>) {
 
 ---
 
+### Advanced-16: Fix Accommodation Form Type Field Emission [S] ✅
+**Description**: Prevent accommodation form from emitting type field by not creating model instance  
+**Files**: 
+- `frontend/src/app/features/itinerary/components/accommodation-form/accommodation-form.component.ts`
+
+**Tasks**:
+1. ✅ Remove creation of Accommodation instance in form submission
+2. ✅ Emit plain accommodationData object instead of model instance
+3. ✅ Update EventEmitter type from Accommodation to Partial<Accommodation>
+4. ✅ Align with flight and transport form patterns
+5. ✅ Test accommodation submission without validation errors
+
+**Verification**:
+- [x] Accommodation form submission succeeds
+- [x] No "property type should not exist" errors
+- [x] Accommodations created and appear in timeline
+- [x] Form behavior matches flight and transport forms
+- [x] EventEmitter type is correct (Partial<Accommodation>)
+
+**Root Cause**: The accommodation form had a different pattern than flight/transport forms:
+
+```typescript
+// BEFORE (accommodation form - buggy):
+const accommodationData: Partial<Accommodation> = { ... };
+const accommodation = new Accommodation(accommodationData);  // Adds type field!
+this.submitAccommodation.emit(accommodation);
+
+// Flight/Transport forms (correct):
+const flightData: Partial<Flight> = { ... };
+this.submitFlight.emit(flightData);  // Plain object, no type field
+```
+
+When the Accommodation constructor runs, it sets `this.type = 'accommodation'`, so the emitted object includes the type field, which the backend DTO rejects.
+
+**Solution**: Emit the plain data object without creating a model instance:
+
+```typescript
+// AFTER (fixed):
+const accommodationData: Partial<Accommodation> = { ... };
+this.submitAccommodation.emit(accommodationData);  // Plain object
+```
+
+Also updated EventEmitter type to match flight/transport forms:
+```typescript
+// Before: EventEmitter<Accommodation>
+// After:  EventEmitter<Partial<Accommodation>>
+```
+
+**Note**: This is different from Advanced-13, which fixed flight/transport forms that were explicitly setting `type: 'flight'` in their data objects. The accommodation form wasn't setting type explicitly - it was inadvertently added by instantiating the model class.
+
+**Completed**: 2025-11-04
+**Commit**: fix: prevent accommodation form from emitting type field (Advanced-16) [98cca47]
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
