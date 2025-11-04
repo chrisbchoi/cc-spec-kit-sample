@@ -1299,25 +1299,28 @@ Tasks are organized into phases with the following markers:
 
 ---
 
-### Advanced-6: Implement Export to JSON [S]
+### Advanced-6: Implement Export to JSON [S] ✅
+
 **Description**: Export trip data as JSON file  
 **Files**: 
 - `backend/src/modules/trips/trips.controller.ts` (add export endpoint)
 - `frontend/src/app/features/trips/pages/trip-detail/trip-detail.component.ts` (add export button)
 
 **Tasks**:
-1. Create `GET /api/trips/:id/export/json` endpoint
-2. Serialize trip with all items
-3. Return JSON with proper formatting
-4. Add "Export" button to trip detail page
-5. Download JSON file on click
-6. Name file appropriately (trip-title-date.json)
+
+1. ✅ Create `GET /api/trips/:id/export/json` endpoint
+2. ✅ Serialize trip with all items
+3. ✅ Return JSON with proper formatting
+4. ✅ Add "Export" button to trip detail page
+5. ✅ Download JSON file on click
+6. ✅ Name file appropriately (trip-title-date.json)
 
 **Verification**:
-- [ ] Export endpoint returns complete data
-- [ ] File downloads correctly
-- [ ] JSON is valid and readable
-- [ ] All data included
+
+- [x] Export endpoint returns complete data
+- [x] File downloads correctly
+- [x] JSON is valid and readable
+- [x] All data included
 
 ---
 
