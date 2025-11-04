@@ -1463,6 +1463,34 @@ Tasks are organized into phases with the following markers:
 
 ---
 
+### Advanced-12: Fix Itinerary Items Details Not Returned to Frontend [S]
+**Description**: Fix backend repository to include flight/transport/accommodation details when fetching trip itinerary  
+**Files**: 
+- `backend/src/modules/itinerary/itinerary.repository.ts`
+
+**Tasks**:
+1. Update findByTripId() to load related flight/transport/accommodation data
+2. Add logic to attach type-specific details to each itinerary item
+3. Query flights table and attach to flight-type items
+4. Query transport table and attach to transport-type items
+5. Query accommodations table and attach to accommodation-type items
+6. Parse JSON location columns correctly
+7. Test API endpoint returns complete item data with locations
+
+**Verification**:
+- [x] GET /api/trips/:tripId/itinerary returns items with flight details
+- [x] Flight items include departureLocation and arrivalLocation objects
+- [x] Transport items include departureLocation and arrivalLocation objects
+- [x] Accommodation items include location object
+- [x] Location objects have address, city, country, latitude, longitude properties
+- [x] Frontend displays departure and arrival information correctly
+- [x] No missing data in trip detail timeline
+
+**Completed**: 2025-11-04
+**Commit**: fix: load and serialize itinerary item details in API response (Advanced-12) [dca354b]
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
