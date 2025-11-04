@@ -1713,6 +1713,68 @@ Also updated EventEmitter type to match flight/transport forms:
 
 ---
 
+### Advanced-17: Fix Accommodation Location JSON Serialization [S] ✅
+**Description**: Fix 500 internal error when creating accommodations by setting locationJson directly  
+**Files**: 
+- `backend/src/modules/itinerary/itinerary.repository.ts`
+
+**Tasks**:
+1. ✅ Identify cause of 500 internal server error for accommodation creation
+2. ✅ Remove virtual location setter usage in entity creation
+3. ✅ Set locationJson directly with JSON.stringify() in create() call
+4. ✅ Test accommodation creation succeeds
+5. ✅ Verify location data properly stored and retrieved
+
+**Verification**:
+- [x] Accommodation creation succeeds without 500 errors
+- [x] Location data properly stored in database
+- [x] Location data properly retrieved and displayed
+- [x] Backend builds without errors
+- [x] Pattern matches Flight and Transport entities
+
+**Root Cause**: TypeORM entity manager doesn't properly handle virtual setters:
+
+```typescript
+// BEFORE (caused 500 error):
+const accommodation = manager.create(Accommodation, {
+  id: accommodationId,
+  itineraryItemId: itemId,
+  name: data.name,
+  // ... other fields
+});
+
+// Trying to use virtual setter AFTER creation
+accommodation.location = data.location;  // ❌ May not work with TypeORM
+
+await manager.save(Accommodation, accommodation);
+```
+
+The virtual setter wasn't being processed correctly by TypeORM's entity manager, leaving `locationJson` column null or undefined, causing database constraint violations or serialization errors.
+
+**Solution**: Set `locationJson` directly in the `create()` call:
+
+```typescript
+// AFTER (fixed):
+const accommodation = manager.create(Accommodation, {
+  id: accommodationId,
+  itineraryItemId: itemId,
+  name: data.name,
+  locationJson: JSON.stringify(data.location),  // ✅ Direct assignment
+  // ... other fields
+});
+
+await manager.save(Accommodation, accommodation);
+```
+
+**Note**: This matches the pattern already used in Flight and Transport entity creation, which both set their location JSON fields directly:
+- `departureLocationJson: JSON.stringify(data.departureLocation)`
+- `arrivalLocationJson: JSON.stringify(data.arrivalLocation)`
+
+**Completed**: 2025-11-04
+**Commit**: fix: set locationJson directly in accommodation creation (Advanced-17) [ba9964e]
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
