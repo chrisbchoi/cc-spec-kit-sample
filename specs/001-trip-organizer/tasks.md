@@ -1775,6 +1775,70 @@ await manager.save(Accommodation, accommodation);
 
 ---
 
+### Advanced-18: Fix Accommodation Entity Column Mapping [S] ✅
+**Description**: Map locationJson property to correct database column name 'location'  
+**Files**: 
+- `backend/src/modules/itinerary/entities/accommodation.entity.ts`
+
+**Tasks**:
+1. ✅ Identify SqliteError: no such column: Accommodation.locationJson
+2. ✅ Check database schema for actual column name
+3. ✅ Add name option to @Column decorator to map property to column
+4. ✅ Test accommodation creation and retrieval
+5. ✅ Verify pattern matches other column mappings in entity
+
+**Verification**:
+- [x] No "no such column: locationJson" errors
+- [x] Accommodation creation succeeds
+- [x] Location data properly stored and retrieved
+- [x] Column mapping pattern consistent with other fields
+- [x] Backend builds without errors
+
+**Root Cause**: Entity property name didn't match database column name:
+
+```typescript
+// BEFORE (caused SqliteError):
+@Column('text')
+locationJson!: string;  // TypeORM tries to use 'locationJson' as column name
+
+// But database schema has:
+CREATE TABLE "accommodations" (
+  ...
+  "location" text NOT NULL,  // Column is named 'location', not 'locationJson'!
+  ...
+);
+```
+
+TypeORM was trying to query `Accommodation.locationJson` but the database only has a `location` column, causing:
+```
+SqliteError: no such column: Accommodation.locationJson
+```
+
+**Solution**: Add `name` option to map property to correct column:
+
+```typescript
+// AFTER (fixed):
+@Column('text', { name: 'location' })
+locationJson!: string;
+```
+
+This tells TypeORM: "The property is called `locationJson` in the entity, but the database column is called `location`"
+
+**Pattern Consistency**: This matches other column mappings in the same entity:
+```typescript
+@Column('varchar', { name: 'confirmation_number' })  // Property: confirmationNumber → Column: confirmation_number
+@Column('varchar', { name: 'phone_number' })         // Property: phoneNumber → Column: phone_number
+@Column('varchar', { name: 'itinerary_item_id' })    // Property: itineraryItemId → Column: itinerary_item_id
+@Column('text', { name: 'location' })                // Property: locationJson → Column: location ✅
+```
+
+**Note**: Flight and Transport entities don't have this issue because their JSON column names in the database match their property names (departure_location_json, arrival_location_json), or they use proper name mappings.
+
+**Completed**: 2025-11-04
+**Commit**: fix: map locationJson property to location database column (Advanced-18) [c82e5e5]
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
