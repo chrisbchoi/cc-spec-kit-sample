@@ -1587,6 +1587,77 @@ return new Flight(flightData);
 
 ---
 
+### Advanced-15: Fix Date String Overwriting in Model Constructors [S] ✅
+**Description**: Prevent model constructors from overwriting Date objects with string values  
+**Files**: 
+- `frontend/src/app/core/models/flight.model.ts`
+- `frontend/src/app/core/models/transport.model.ts`
+- `frontend/src/app/core/models/accommodation.model.ts`
+
+**Tasks**:
+1. ✅ Replace Object.assign() with explicit property assignments in Flight constructor
+2. ✅ Replace Object.assign() with explicit property assignments in Transport constructor
+3. ✅ Replace Object.assign() with explicit property assignments in Accommodation constructor
+4. ✅ Preserve date conversions done by ItineraryItemBase parent constructor
+5. ✅ Test that departure/arrival dates display correctly
+6. ✅ Verify formatDate() receives valid Date objects
+7. ✅ Ensure all type-specific fields still assigned properly
+
+**Verification**:
+- [x] Departure dates display correctly (not blank)
+- [x] Arrival dates display correctly (not blank)
+- [x] Date formatting works in timeline
+- [x] startDate and endDate are Date instances, not strings
+- [x] Flight-specific fields still assigned (airline, flightNumber, etc.)
+- [x] Transport-specific fields still assigned (transportType, provider, etc.)
+- [x] Accommodation-specific fields still assigned (name, phoneNumber, etc.)
+
+**Root Cause**: Model constructors had a critical bug in initialization sequence:
+
+```typescript
+// BEFORE (buggy):
+constructor(data?: Partial<Flight>) {
+  super(data);              // Step 1: Parent converts date strings to Date objects
+  if (data) {
+    Object.assign(this, data);  // Step 2: Overwrites with original data (dates become strings again!)
+    this.type = 'flight';
+  }
+}
+```
+
+The `Object.assign(this, data)` was overwriting the Date objects created by the parent constructor with the original string values from the API response.
+
+**Why formatDate() returned empty strings**:
+```typescript
+// In date.utils.ts
+if (!date || !(date instanceof Date) || isNaN(date.getTime())) {
+  return '';  // Returns empty string for date strings!
+}
+```
+
+**Solution**: Explicitly assign only type-specific fields:
+
+```typescript
+// AFTER (fixed):
+constructor(data?: Partial<Flight>) {
+  super(data);  // Parent converts dates
+  if (data) {
+    // Assign ONLY flight-specific fields
+    if (data.flightNumber !== undefined) this.flightNumber = data.flightNumber;
+    if (data.airline !== undefined) this.airline = data.airline;
+    if (data.confirmationCode !== undefined) this.confirmationCode = data.confirmationCode;
+    if (data.departureLocation !== undefined) this.departureLocation = data.departureLocation;
+    if (data.arrivalLocation !== undefined) this.arrivalLocation = data.arrivalLocation;
+    this.type = 'flight';
+  }
+}
+```
+
+**Completed**: 2025-11-04
+**Commit**: fix: prevent date string overwriting in model constructors (Advanced-15) [f44ca92]
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
