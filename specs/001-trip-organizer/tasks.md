@@ -1270,10 +1270,10 @@ Tasks are organized into phases with the following markers:
 7. Mark locations with numbered pins
 
 **Verification**:
-- [ ] Map displays all locations
-- [ ] Markers numbered correctly
-- [ ] Map view toggles with timeline
-- [ ] Handles items without locations
+- [X] Map displays all locations
+- [X] Markers numbered correctly
+- [X] Map view toggles with timeline
+- [X] Handles items without locations
 
 ---
 
