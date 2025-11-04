@@ -1353,6 +1353,29 @@ Tasks are organized into phases with the following markers:
 
 ---
 
+### Advanced-8: Connect Forms to ItineraryStore [S]
+**Description**: Wire up add-item forms to actually save data to backend  
+**Files**: 
+- `frontend/src/app/features/itinerary/pages/add-item/add-item.component.ts`
+
+**Tasks**:
+1. Inject ItineraryStore into AddItemComponent
+2. Update onFlightSubmit to call store.createFlight
+3. Update onTransportSubmit to call store.createTransport
+4. Update onAccommodationSubmit to call store.createAccommodation
+5. Add loading state handling during submission
+6. Add error handling for failed submissions
+
+**Verification**:
+- [ ] Can add flight items to trip
+- [ ] Can add transport items to trip
+- [ ] Can add accommodation items to trip
+- [ ] Items appear in timeline after creation
+- [ ] Items persist after page reload
+- [ ] Error messages shown on failure
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
