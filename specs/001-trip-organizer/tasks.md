@@ -1491,6 +1491,41 @@ Tasks are organized into phases with the following markers:
 
 ---
 
+### Advanced-13: Fix Form Payload Validation Errors [S] ✅
+**Description**: Remove type and tripId fields from itinerary form submissions to match backend DTO expectations  
+**Files**: 
+- `frontend/src/app/features/itinerary/components/flight-form/flight-form.component.ts`
+- `frontend/src/app/features/itinerary/components/transport-form/transport-form.component.ts`
+- `frontend/src/app/features/itinerary/components/accommodation-form/accommodation-form.component.ts`
+
+**Tasks**:
+1. ✅ Remove 'type' field from flight form submission payload
+2. ✅ Remove 'tripId' field from flight form submission payload
+3. ✅ Remove 'type' field from transport form submission payload
+4. ✅ Remove 'tripId' field from transport form submission payload
+5. ✅ Remove 'type' field from accommodation form submission payload
+6. ✅ Remove 'tripId' field from accommodation form submission payload
+7. ✅ Update comments to explain why these fields are excluded
+8. ✅ Test form submissions work without 400 Bad Request errors
+
+**Verification**:
+- [x] Flight form submission succeeds without validation errors
+- [x] Transport form submission succeeds without validation errors
+- [x] Accommodation form submission succeeds without validation errors
+- [x] No "property type should not exist" errors
+- [x] No "property tripId should not exist" errors
+- [x] Items created successfully and appear in timeline
+- [x] Backend DTOs receive only expected fields
+
+**Root Cause**: Backend DTOs (CreateFlightDto, CreateTransportDto, CreateAccommodationDto) do not include 'type' or 'tripId' fields because:
+- 'type' is implicit from the API endpoint URL (e.g., `/trips/:tripId/itinerary/flight`)
+- 'tripId' is already provided as a URL path parameter and doesn't need to be in the request body
+
+**Completed**: 2025-11-04
+**Commit**: fix: remove type and tripId from itinerary form payloads (Advanced-13) [f7b8006]
+
+---
+
 ## Phase 8: Testing & Polish
 
 ### Test-1: Write Unit Tests for Backend Services [T]
