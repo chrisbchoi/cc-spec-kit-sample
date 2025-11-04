@@ -1292,10 +1292,10 @@ Tasks are organized into phases with the following markers:
 7. Integrate into trip and item forms
 
 **Verification**:
-- [ ] Changes auto-save after delay
-- [ ] Indicator shows save status
-- [ ] Multiple rapid changes debounced
-- [ ] Errors shown to user
+- [X] Changes auto-save after delay
+- [X] Indicator shows save status
+- [X] Multiple rapid changes debounced
+- [X] Errors shown to user
 
 ---
 
