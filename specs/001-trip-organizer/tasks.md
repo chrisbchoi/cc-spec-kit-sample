@@ -1869,25 +1869,44 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 ---
 
 ### Test-2: Write Unit Tests for Frontend Components [T]
-**Description**: Test Angular components  
+**Description**: Test Angular components with Karma/Jasmine  
 **Files**: 
-- `frontend/src/app/features/trips/components/**/*.spec.ts`
-- `frontend/src/app/features/itinerary/components/**/*.spec.ts`
+- `frontend/src/app/app.component.spec.ts`
+- `frontend/src/app/features/trips/components/**/*.spec.ts` (3 components)
+- `frontend/src/app/features/trips/pages/**/*.spec.ts` (2 pages)
+- `frontend/src/app/features/itinerary/components/**/*.spec.ts` (7 components)
+- `frontend/src/app/features/itinerary/pages/**/*.spec.ts` (2 pages)
+- `frontend/src/app/features/maps/components/**/*.spec.ts` (2 components)
+- `frontend/src/app/shared/components/**/*.spec.ts` (5 components)
+
+**Components to Test** (21 total):
+- **Root**: app.component
+- **Trips Components**: trip-card, trip-form, trip-list
+- **Trips Pages**: trip-detail, trips-dashboard
+- **Itinerary Components**: accommodation-form, flight-form, transport-form, drag-drop-list, gap-indicator, itinerary-item, itinerary-timeline
+- **Itinerary Pages**: add-item, itinerary-view
+- **Maps Components**: location-display, trip-map-view
+- **Shared Components**: confirmation-dialog, date-time-picker, loading-spinner, location-search, save-status-indicator
 
 **Tasks**:
-1. Set up Jest for Angular
-2. Write tests for TripListComponent
-3. Write tests for TripFormComponent
-4. Write tests for timeline components
-5. Write tests for form components
-6. Test component inputs, outputs, and behavior
-7. Test with TestBed and component fixtures
+1. Fix existing failing test in app.component.spec.ts
+2. Write tests for trips feature components (trip-card, trip-form, trip-list)
+3. Write tests for trips pages (trip-detail, trips-dashboard)
+4. Write tests for itinerary form components (accommodation-form, flight-form, transport-form)
+5. Write tests for itinerary display components (drag-drop-list, gap-indicator, itinerary-item, itinerary-timeline)
+6. Write tests for itinerary pages (add-item, itinerary-view)
+7. Write tests for maps components (location-display, trip-map-view)
+8. Write tests for shared components (confirmation-dialog, date-time-picker, loading-spinner, location-search, save-status-indicator)
+9. Test component inputs, outputs, and user interactions
+10. Use TestBed and component fixtures for all tests
+11. Mock services and stores appropriately
 
 **Verification**:
-- [ ] All component tests pass
-- [ ] User interactions tested
-- [ ] Inputs/outputs tested
-- [ ] Coverage >80%
+- [ ] All 21 component tests pass
+- [ ] User interactions tested (button clicks, form inputs, etc.)
+- [ ] Component @Input() and @Output() tested
+- [ ] Coverage >80% on component files
+- [ ] No console errors or warnings
 
 ---
 
