@@ -1995,25 +1995,35 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 
 ---
 
-### Test-3: Write Unit Tests for Stores [T]
+---
+
+### Test-3: Write Unit Tests for Stores [T] ✅
 **Description**: Test NgRx stores and state management  
 **Files**: 
 - `frontend/src/app/features/trips/store/trips.store.spec.ts`
 - `frontend/src/app/features/itinerary/store/itinerary.store.spec.ts`
 
 **Tasks**:
-1. Write tests for TripsStore methods
-2. Write tests for ItineraryStore methods
-3. Test computed signals
-4. Test async operations (API calls)
-5. Mock API services
-6. Test error handling
+1. Write tests for TripsStore methods ✅
+2. Write tests for ItineraryStore methods ✅
+3. Test computed signals ✅
+4. Test async operations (API calls) ✅
+5. Mock API services ✅
+6. Test error handling ✅
 
 **Verification**:
-- [ ] All store tests pass
-- [ ] State updates correctly
-- [ ] Computed signals work
-- [ ] API integration mocked
+- [x] All store tests pass (157 tests total)
+- [x] TripsStore fully tested (79 tests covering CRUD, signals, computed properties)
+- [x] ItineraryStore fully tested (78 tests covering CRUD, signals, gap management)
+- [x] State updates correctly (patchState verified)
+- [x] Computed signals work (filters, sorting, counts tested)
+- [x] API integration mocked (jasmine.createSpyObj patterns)
+- [x] Error handling tested (throwError scenarios)
+- [x] Async operations tested (rxMethod with setTimeout callbacks)
+- [x] Edge cases covered (empty arrays, null values, errors without messages)
+
+**Completed**: 2025-11-05
+**Commit**: test: add unit tests for NgRx signal stores (Test-3) [8e175ff]
 
 ---
 
