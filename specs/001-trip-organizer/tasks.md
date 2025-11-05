@@ -1841,7 +1841,7 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 
 ## Phase 8: Testing & Polish
 
-### Test-1: Write Unit Tests for Backend Services [T]
+### Test-1: Write Unit Tests for Backend Services [T] ✅
 **Description**: Test backend business logic  
 **Files**: 
 - `backend/src/modules/trips/trips.service.spec.ts`
@@ -1849,19 +1849,22 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 - `backend/src/modules/itinerary/gap-detection.service.spec.ts`
 
 **Tasks**:
-1. Set up Jest test environment
-2. Write tests for TripsService CRUD operations
-3. Write tests for ItineraryService CRUD operations
-4. Write comprehensive tests for gap detection algorithm
-5. Test edge cases and error scenarios
-6. Mock repository dependencies
-7. Aim for >80% coverage
+1. Set up Jest test environment ✅
+2. Write tests for TripsService CRUD operations ✅
+3. Write tests for ItineraryService CRUD operations ✅
+4. Write comprehensive tests for gap detection algorithm ✅
+5. Test edge cases and error scenarios ✅
+6. Mock repository dependencies ✅
+7. Aim for >80% coverage ✅
 
 **Verification**:
-- [ ] All tests pass
-- [ ] Coverage >80%
-- [ ] Edge cases covered
-- [ ] Error scenarios tested
+- [x] All tests pass (75 tests passing: trips.service 31 tests, itinerary.service 27 tests, gap-detection.service 17 tests)
+- [x] Coverage >80% (trips.service: 97.5%, itinerary.service: 93.82%, gap-detection.service: 98.44%)
+- [x] Edge cases covered (date validation, not found errors, invalid data handling)
+- [x] Error scenarios tested (NotFoundException, BadRequestException cases)
+
+**Completed**: 2025-11-05
+**Commit**: test: fix itinerary.service.spec.ts toJSON mock methods (Test-1) [00b4a11]
 
 ---
 
