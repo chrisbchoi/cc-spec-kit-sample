@@ -1883,7 +1883,7 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 - **Root**: app.component ✅
 - **Trips Components**: trip-card ✅, trip-form ✅, trip-list ✅
 - **Trips Pages**: trip-detail ✅, trips-dashboard ✅
-- **Itinerary Components**: accommodation-form, flight-form, transport-form, drag-drop-list, gap-indicator, itinerary-item, itinerary-timeline
+- **Itinerary Components**: accommodation-form ✅, flight-form ✅, transport-form ✅, drag-drop-list, gap-indicator, itinerary-item, itinerary-timeline
 - **Itinerary Pages**: add-item, itinerary-view
 - **Maps Components**: location-display, trip-map-view
 - **Shared Components**: confirmation-dialog, date-time-picker, loading-spinner, location-search, save-status-indicator
@@ -1892,7 +1892,7 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 1. ✅ Fix existing failing test in app.component.spec.ts (commit: 6609aa0)
 2. ✅ Write tests for trips feature components (trip-card, trip-form, trip-list) (commit: 6609aa0)
 3. ✅ Write tests for trips pages (trip-detail, trips-dashboard) (commit: 69391f8)
-4. Write tests for itinerary form components (accommodation-form, flight-form, transport-form)
+4. ✅ Write tests for itinerary form components (accommodation-form, flight-form, transport-form) (commit: 6873cf5)
 5. Write tests for itinerary display components (drag-drop-list, gap-indicator, itinerary-item, itinerary-timeline)
 6. Write tests for itinerary pages (add-item, itinerary-view)
 7. Write tests for maps components (location-display, trip-map-view)
@@ -1914,6 +1914,14 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 - [X] Navigation actions tested
 - [X] Store integration tested (signal-based)
 - [X] 57 tests passing, coverage ~22%
+- [X] No console errors or warnings
+
+**Verification (Group 3 - Itinerary Forms)**:
+- [X] All 3 form component tests pass (accommodation-form, flight-form, transport-form)
+- [X] Form initialization and population tested
+- [X] Signal-based duration calculation tested
+- [X] Validation and error handling tested
+- [X] 141 tests passing, coverage ~77%
 - [X] No console errors or warnings
 
 **Verification (Overall)**:
