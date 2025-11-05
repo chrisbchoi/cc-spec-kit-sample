@@ -1933,7 +1933,21 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 - [X] 154 tests passing (185 total test cases), coverage ~57%
 - [X] No console errors or warnings
 
+**Verification (Group 5 - Itinerary Pages)**:
+
+- [X] All 2 page component tests pass (add-item, itinerary-view)
+- [X] Route parameter mocking with BehaviorSubject<Map<>> tested
+- [X] Query parameter pre-selection tested
+- [X] Store signal integration tested (loading, error states)
+- [X] Async submission monitoring with setInterval/fakeAsync tested
+- [X] Timeout handling (10-second fallback) tested
+- [X] Navigation success/failure paths tested
+- [X] Type selection and form integration tested
+- [X] 48 tests passing (202 total test cases), commit 130230d
+- [X] No console errors or warnings
+
 **Verification (Overall)**:
+
 - [ ] All 21 component tests pass
 - [ ] Coverage >80% on component files
 
@@ -1968,7 +1982,7 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 - `frontend/cypress/e2e/itinerary-management.cy.ts`
 
 **Tasks**:
-1. Set up Cypress or Playwright
+1. Set up Playwright
 2. Write test: Create new trip
 3. Write test: Add flight to trip
 4. Write test: Add transport to trip
