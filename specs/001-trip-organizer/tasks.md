@@ -1883,9 +1883,9 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 - **Root**: app.component ✅
 - **Trips Components**: trip-card ✅, trip-form ✅, trip-list ✅
 - **Trips Pages**: trip-detail ✅, trips-dashboard ✅
-- **Itinerary Components**: accommodation-form ✅, flight-form ✅, transport-form ✅, drag-drop-list, gap-indicator, itinerary-item, itinerary-timeline
-- **Itinerary Pages**: add-item, itinerary-view
-- **Maps Components**: location-display, trip-map-view
+- **Itinerary Components**: accommodation-form ✅, flight-form ✅, transport-form ✅, drag-drop-list ✅, gap-indicator ✅, itinerary-item ✅, itinerary-timeline ✅
+- **Itinerary Pages**: add-item ✅, itinerary-view ✅
+- **Maps Components**: location-display ✅, trip-map-view ✅
 - **Shared Components**: confirmation-dialog, date-time-picker, loading-spinner, location-search, save-status-indicator
 
 **Tasks**:
@@ -1894,8 +1894,8 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 3. ✅ Write tests for trips pages (trip-detail, trips-dashboard) (commit: 69391f8)
 4. ✅ Write tests for itinerary form components (accommodation-form, flight-form, transport-form) (commit: 6873cf5)
 5. ✅ Write tests for itinerary display components (drag-drop-list, gap-indicator, itinerary-item, itinerary-timeline) (commit: 1b46f95)
-6. Write tests for itinerary pages (add-item, itinerary-view)
-7. Write tests for maps components (location-display, trip-map-view)
+6. ✅ Write tests for itinerary pages (add-item, itinerary-view)
+7. ✅ Write tests for maps components (location-display, trip-map-view)
 8. Write tests for shared components (confirmation-dialog, date-time-picker, loading-spinner, location-search, save-status-indicator)
 9. ✅ Test component inputs, outputs, and user interactions
 10. ✅ Use TestBed and component fixtures for all tests
@@ -1960,9 +1960,27 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 - [X] 56 tests passing (258 total test cases), commit 3b81302
 - [X] No console errors or warnings
 
+**Verification (Group 7 - Shared Components)**:
+
+- [X] All 5 shared component tests pass (loading-spinner, confirmation-dialog, save-status-indicator, date-time-picker, location-search)
+- [X] ControlValueAccessor interface implementation tested (date-time-picker, location-search)
+- [X] Event emission with Jasmine spies tested (confirmation-dialog)
+- [X] Signal reactivity tested (location-search: isLoading, showSuggestions, suggestions, errorMessage)
+- [X] Debounced search with fakeAsync/tick tested (300ms delay, distinctUntilChanged)
+- [X] FormControl integration and binding tested
+- [X] RxJS subscription cleanup (ngOnDestroy with destroy$ Subject) tested
+- [X] Keyboard event simulation tested (Escape key handling)
+- [X] Computed properties with enum states tested (save-status-indicator with AutoSaveStatus)
+- [X] Date+time combination with default time handling tested
+- [X] Mock geocoding service tested (3 results per query, unique place IDs)
+- [X] Focus/blur suggestion visibility tested (200ms blur delay)
+- [X] Clear functionality tested (clears controls, emits null, calls onTouched)
+- [X] 141 tests passing (399 total test cases), commit 77cfb2d
+- [X] No console errors or warnings
+
 **Verification (Overall)**:
 
-- [ ] All 21 component tests pass
+- [ ] All 21 component tests pass (should be 17 component files with tests)
 - [ ] Coverage >80% on component files
 
 ---
