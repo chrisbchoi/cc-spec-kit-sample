@@ -1946,6 +1946,20 @@ This tells TypeORM: "The property is called `locationJson` in the entity, but th
 - [X] 48 tests passing (202 total test cases), commit 130230d
 - [X] No console errors or warnings
 
+**Verification (Group 6 - Maps Components)**:
+
+- [X] All 2 maps component tests pass (location-display, trip-map-view)
+- [X] MapsService mocking with isLocationGeocoded and getMapUrl tested
+- [X] Display text variations tested (full address, city/country, fallbacks)
+- [X] Location validation and map URL generation tested
+- [X] window.open spy for "Open in Maps" functionality tested
+- [X] Marker extraction from mixed itinerary items tested (flights, transport, accommodation)
+- [X] Computed signals tested (markers, hasLocations, mapEmbedUrl)
+- [X] Full map URL generation tested (single location vs directions)
+- [X] Marker icons and color classes by type tested
+- [X] 56 tests passing (258 total test cases), commit 3b81302
+- [X] No console errors or warnings
+
 **Verification (Overall)**:
 
 - [ ] All 21 component tests pass
